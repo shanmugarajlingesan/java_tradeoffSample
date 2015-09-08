@@ -1,0 +1,114 @@
+{
+	"subject" : "Account",
+	"columns" : [{
+			"key" : "price",
+			"type" : "numeric",
+			"goal" : "min",
+			"full_name" : "Price",
+			"is_objective" : true,
+			"format" : "€####0.00"
+		}, {
+			"key" : "credit_card",
+			"type" : "categorical",
+			"goal" : "min",
+			"full_name" : "Credit Card",
+			"is_objective" : true,
+			"range" : ["Yes","No"],
+			"preference" : ["Yes","No"]
+		}, {
+			"key" : "debit_card",
+			"type" : "categorical",
+			"goal" : "min",
+			"full_name" : "Debit Card",
+			"is_objective" : true,
+			"range" : ["Yes","No"],
+			"preference" : ["Yes","No"]
+		}, {
+			"key" : "foreign_currency",
+			"type" : "categorical",
+			"goal" : "min",
+			"full_name" : "Foreign Currency",
+			"is_objective" : true,
+			"range" : ["Yes","No"],
+			"preference" : ["Yes","No"]
+		}
+	],
+	"subject" : "account",
+	"options" : [{
+			"key" : "1",
+			"name" : "Test1 Account",
+			"values" : {
+				"price" : 3,
+				"credit_card" : "Yes",
+				"debit_card" : "Yes",
+				"foreign_currency" : "No"
+			},
+			"description_html" : ""
+		},
+		{
+			"key" : "2",
+			"name" : "Test2 Account",
+			"values" : {
+				"price" : 5,
+				"credit_card" : "Yes",
+				"debit_card" : "No",
+				"foreign_currency" : "Yes"
+			},
+			"description_html" : ""
+		},
+		{
+			"key" : "3",
+			"name" : "Test3 Account",
+			"values" : {
+				"price" : 4,
+				"credit_card" : "Yes",
+				"debit_card" : "No",
+				"foreign_currency" : "Yes"
+			},
+			"description_html" : ""
+		},
+		{
+			"key" : "4",
+			"name" : "Test4 Account",
+			"values" : {
+				"price" : 1,
+				"credit_card" : "Yes",
+				"debit_card" : "No",
+				"foreign_currency" : "Yes"
+			},
+			"description_html" : ""
+		},
+		{
+			"key" : "5",
+			"name" : "Test5 Account",
+			"values" : {
+				"price" : 0,
+				"credit_card" : "Yes",
+				"debit_card" : "No",
+				"foreign_currency" : "Yes"
+			},
+			"description_html" : ""
+		},
+		{
+			"key" : "6",
+			"name" : "Test6 Account",
+			"values" : {
+				"price" : 2,
+				"credit_card" : "Yes",
+				"debit_card" : "No",
+				"foreign_currency" : "Yes"
+			},
+			"description_html" : ""
+		},
+		{
+			"key" : "7",
+			"name" : "Test7 Account",
+			"values" : {
+				"price" : 8,
+				"credit_card" : "Yes",
+				"debit_card" : "No",
+				"foreign_currency" : "Yes"
+			},
+			"description_html" : ""
+		}]
+}

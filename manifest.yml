@@ -1,12 +1,10 @@
----
-declared-services:
-  tradeoff-analytics-standard-service:
-    label: tradeoff_analytics
-    plan: standard
 applications:
 - services:
-  - tradeoff-analytics-standard-service
-  name: tradeoff-analytics-java-search-2125
+  - Tradeoff Analytics-ht
+  disk_quota: 1024M
+  host: tradeoffjava
+  name: tradeoffjava
   path: webApp.war
+  domain: mybluemix.net
+  instances: 1
   memory: 512M
-  host: tradeoff-analytics-java-search-2125
