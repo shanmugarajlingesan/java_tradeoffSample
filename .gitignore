@@ -4,3 +4,6 @@ build/
 /output/webApp.war
 .DS_Store
 output/
+*.iml
+.idea
+.settings
