@@ -130,10 +130,20 @@
   }
 
   function loadSelectedProblem() {
-    var path = 'problems/' + $('.problems').val();
+    $.ajax({
+        url: "/products",
+        type: 'GET',
+        success: function(data){
+          $('.problemText').val(JSON.stringify(data, null, 2)).change();
+        },
+        error: function(xhr, status, thrown) {
+          alert("some error");
+        }
+    });
+    /*var path = 'problems/' + $('.problems').val();
     $.getJSON(path, function(data) {
       $('.problemText').val(JSON.stringify(data, null, 2)).change();
-    });
+    });*/
   }
 
   function createOptionsTable(problem, parent) {
