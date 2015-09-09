@@ -131,7 +131,7 @@
 
   function loadSelectedProblem() {
     $.ajax({
-        url: "/products",
+        url: "/webApp_war/api/products",
         type: 'GET',
         success: function(data){
           $('.problemText').val(JSON.stringify(data, null, 2)).change();
@@ -140,10 +140,6 @@
           alert("some error");
         }
     });
-    /*var path = 'problems/' + $('.problems').val();
-    $.getJSON(path, function(data) {
-      $('.problemText').val(JSON.stringify(data, null, 2)).change();
-    });*/
   }
 
   function createOptionsTable(problem, parent) {
