@@ -28,6 +28,9 @@
   var MIN_BAR_SLIDE_PERIOD = 500;
   var currentProblem = null;
 
+  function submitform(data) {
+    document.getElementsByClassName('results').addClass('showResults');
+  }
   /**
    * Smooth scroll to any DOM element
    * @param  {String} DOM element
@@ -130,9 +133,15 @@
   }
 
   function loadSelectedProblem() {
-    var path = 'problems/' + $('.problems').val();
-    $.getJSON(path, function(data) {
-      $('.problemText').val(JSON.stringify(data, null, 2)).change();
+    $.ajax({
+        url: "/webApp_war/api/products",
+        type: 'GET',
+        success: function(data){
+          $('.problemText').val(JSON.stringify(data, null, 2)).change();
+        },
+        error: function(xhr, status, thrown) {
+          alert("some error");
+        }
     });
   }
 
