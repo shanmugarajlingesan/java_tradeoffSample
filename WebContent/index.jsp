@@ -16,48 +16,39 @@
 </head>
 
 <body>
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-12">
-				<div class="row top-nav">
-					<div class="col-lg-12">
-						<h3 class="heading left">
-							IBM <span>Watson Developer Cloud</span>: Demo
-						</h3>
-						<a
-							href="http://www.ibm.com/smarterplanet/us/en/ibmwatson/developercloud/doc/tradeoff-analytics/"
-							class="right">Documentation</a><a
-							href="http://www.ibm.com/smarterplanet/us/en/ibmwatson/developercloud/apis/#!/tradeoff-analytics"
-							class="right">API Details</a>
-					</div>
-				</div>
-				<div style="padding-bottom: 0px;" class="row header">
-					<div class="avatar img-container col-lg-1 col-xs-1">
-						<img src="images/app.png">
-					</div>
-					<div class="col-lg-6 col-xs-6">
-						<h2>Tradeoff Analytics NodeJS Starter Application</h2>
-						<p>The Tradeoff Analytics service helps find the best
-							available options for you. It helps users make better decisions
-							under multiple conflicting goals.</p>
-						<a
-							href="http://www.ibm.com/smarterplanet/us/en/ibmwatson/developercloud/tradeoff-analytics.html"
-							class="learn-more">More about this service</a>
-					</div>
-					<div class="col-lg-4 col-xs-4 build-your-own">
-						<h3>Build your own:</h3>
-						<a
-							href="https://bluemix.net/deploy?repository=https://github.com/watson-developer-cloud/tradeoff-analytics-java.git"
-							class="left fork">Fork and Deploy on Bluemix</a><a
-							href="https://github.com/watson-developer-cloud/tradeoff-analytics-java"
-							class="right fork">Fork on Github</a>
-					</div>
-				</div>
-			</div>
+<div class="wrapper">
+	<div class="header">
+		<img class="raboLogo" src="images/logo.png">
+		<div class="headerText">
+			<span class="headerDesc">Product Suggestion using Watson Services</span>
 		</div>
-		<div class="row">
+	</div>
+	<form class="homeForm" action="" method="">
+		<div class="comp">Type of Customer<br>
+			<input class="minComp" type="radio" name="accountType" value="private" checked>Private
+			<input class="minComp secondary" type="radio" name="accountType" value="business">Business
+		</div>
+		<div class="comp">Do you need a debit card ? <br>
+			<input class="minComp" type="radio" name="debitCard" value="true" checked>Yes
+			<input class="minComp secondary" type="radio" name="debitCard" value="false">No
+		</div>
+		<div class="comp">Do you need a Credit card ? <br>
+			<input class="minComp" type="radio" name="creditCard" value="true" checked>Yes
+			<input class="minComp secondary" type="radio" name="creditCard" value="false">No
+		</div>
+		<div class="comp">Does your product need foreign currency ?<br>
+			<input class="minComp primary" type="radio" name="foreignCurrency" value="true" checked>Yes
+			<input class="minComp secondary" type="radio" name="foreignCurrency" value="false">No
+		</div>
+		<div class="comp">Describe the product<br>
+			<textarea rows="5" cols="50" name="description" class="minComp" placeholder="Please enter features here"></textarea>
+		</div>
+		<div class="compBtn">
+			<input class="btn" type="button" name="button" value="Submit" onclick="submitform(this.form)">
+		</div>
+	</form>
+		<div class="row results">
 			<div class="col-lg-12 col-xs-12">
-				<h2>Try the service</h2>
 				<div class="well">
 					<div class="form-group row">
 						<div class="col-lg-6 col-md-6 col-xs-6">

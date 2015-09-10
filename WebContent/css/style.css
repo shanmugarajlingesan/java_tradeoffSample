@@ -1,3 +1,83 @@
+.wrapper {
+  height: 100%;
+  background-color: white;
+  margin: 0 auto;
+}
+.header {
+  margin-bottom: 3rem;
+  margin-left:2rem;
+  margin-right:2rem;
+  padding-top:2rem;
+  height:12.2rem;
+  width:100%;
+}
+.headerTitle {
+  font-size:3rem;
+}
+
+.headerText {
+  text-align: center;
+  padding-top: 1.7rem;
+}
+.headerDesc {
+  color: #0000ff;
+  font-size: 3.6rem;
+  font-weight: bolder;
+}
+.raboLogo {
+  margin-left : 2rem;
+  margin-right: 3rem;
+  height: 9.2rem;
+  width: 8rem;
+  float:left;
+}
+.homeForm {
+  color: #A0A0A0;
+  font-size: 1.8rem;
+  font-weight: normal;
+  max-width: 34rem;
+  margin: 0 auto;
+}
+
+.comp {
+  margin-bottom: 2rem;
+  line-height: 3rem;
+}
+.minComp {
+  margin-top: 0.5rem;
+  font-family: "Open Sans",Arial,"Lucida Grande",sans-serif;
+  font-size: 1rem;
+  color: #A0A0A0;
+}
+
+.primary {
+  margin-left:2rem;
+}
+
+.secondary {
+  margin-left: 11rem;
+}
+
+input[type="radio"], input[type="checkbox"] {
+  margin: 4px 8px 0;
+}
+
+.compBtn {
+  text-align: center;
+}
+
+.btn {
+  border-radius: 0.5rem;
+  font-size: 1.6rem;
+}
+
+.showResults {
+  display: block;
+}
+
+.results {
+  display: none;
+}
 
 .resizeIcon {
   width: 16px;

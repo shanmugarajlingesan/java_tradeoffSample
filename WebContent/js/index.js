@@ -28,6 +28,9 @@
   var MIN_BAR_SLIDE_PERIOD = 500;
   var currentProblem = null;
 
+  function submitform(data) {
+    document.getElementsByClassName('results').addClass('showResults');
+  }
   /**
    * Smooth scroll to any DOM element
    * @param  {String} DOM element
