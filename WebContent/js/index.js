@@ -31,7 +31,7 @@
   var currentProblem = null;
    // $('.homeForm').css();
 
-  $('.btn').bind('click', this, function() {
+  $('.submitbtn').bind('click', this, function() {
     var formData = {
       "accountType" : this.form.accountType.value,
       "debitCard" : this.form.debitCard.value,
