@@ -1,15 +1,18 @@
+body {
+  font-family: Myriad Regular,Verdana,Sans Serif;
+  background-color: #fafafa;
+}
 .wrapper {
   height: 100%;
-  background-color: white;
   margin: 0 auto;
 }
 .header {
-  margin-bottom: 3rem;
-  margin-left:2rem;
-  margin-right:2rem;
-  padding-top:2rem;
-  height:12.2rem;
-  width:100%;
+  margin: 2px 15.1rem 3rem 23rem;
+  padding-top: 2rem;
+  height: 16.2rem;
+  background-color: white;
+  border: none;
+  position: relative;
 }
 .headerTitle {
   font-size:3rem;
@@ -25,28 +28,44 @@
   font-weight: bolder;
 }
 .raboLogo {
-  margin-left : 2rem;
-  margin-right: 3rem;
+  margin-left: 4rem;
+  margin-bottom: 2rem;
   height: 9.2rem;
   width: 8rem;
-  float:left;
+}
+.headerColor {
+  background: #009;
+  padding: 0.5rem 0 0 2rem;
+  height: 3.3rem;
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 600;
 }
 .homeForm {
   color: #A0A0A0;
+  background-color: white;
   font-size: 1.8rem;
   font-weight: normal;
-  max-width: 34rem;
+  max-width: 60rem;
   margin: 0 auto;
+  padding: 2rem;
+  margin: 0 10rem 2rem 23rem;
+  box-shadow: 0 0 15px #aaa;
 }
-
+.formHeader {
+  color: #fd6400;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
 .comp {
   margin-bottom: 2rem;
   line-height: 3rem;
 }
 .minComp {
   margin-top: 0.5rem;
-  font-family: "Open Sans",Arial,"Lucida Grande",sans-serif;
-  font-size: 1rem;
+  /*font-family: "Open Sans",Arial,"Lucida Grande",sans-serif;*/
+  font-size: 1.5rem;
   color: #A0A0A0;
 }
 
@@ -69,6 +88,9 @@ input[type="radio"], input[type="checkbox"] {
 .btn {
   border-radius: 0.5rem;
   font-size: 1.6rem;
+  background-color: #fd6400;
+  border: 1px solid #fd6400;
+  color: #fff;
 }
 
 .showResults {
@@ -153,7 +175,7 @@ input[type="radio"], input[type="checkbox"] {
   height: 250px;
   width: 100%;
   resize: none;
-  font-family: courier;
+  /*font-family: courier;*/
 }
 
 .advanceEditArea {
@@ -164,7 +186,7 @@ input[type="radio"], input[type="checkbox"] {
   height: 100%;
   width: 100%;
   resize: none;
-  font-family: courier;
+ /* font-family: courier;*/
 }
 
 

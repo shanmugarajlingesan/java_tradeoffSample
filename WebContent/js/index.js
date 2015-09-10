@@ -29,6 +29,7 @@
   var lastProfile = 'basic';
   var MIN_BAR_SLIDE_PERIOD = 500;
   var currentProblem = null;
+   // $('.homeForm').css();
 
   $('.btn').bind('click', this, function() {
     var formData = {
@@ -42,6 +43,7 @@
     loadSelectedProblem(formData);
     $('.results').addClass('showResults');
     $('.results').removeClass('results');
+    $('.homeForm').addClass('results');
  });
 
   function loadSelectedProblem(request){
@@ -52,7 +54,7 @@
              url: "/webApp_war/api/products",
              type: 'POST',
              dataType: 'json',
-             data: request,
+             data: JSON.stringify(request),
              success: function(data){
                $('.problemText').val(JSON.stringify(data, null, 2)).change();
              },

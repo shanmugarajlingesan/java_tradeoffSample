@@ -19,14 +19,15 @@
 <div class="wrapper">
 	<div class="header">
 		<img class="raboLogo" src="images/logo.png">
-		<div class="headerText">
-			<span class="headerDesc">Product Suggestion using Watson Services</span>
+		<div class="headerColor">
+			Zoek Producten
 		</div>
 	</div>
 	<form class="homeForm" action="" method="">
-		<div class="comp">Type of Customer<br>
-			<input class="minComp" type="radio" name="accountType" value="private" checked>Private
-			<input class="minComp secondary" type="radio" name="accountType" value="business">Business
+		<h3 class="formHeader">Find the product which meets your expectations..</h3>
+		<div class="comp">To which category of customer you belong ? <br>
+			<input class="minComp" type="radio" name="accountType" value="PRIVATE" checked>Private
+			<input class="minComp secondary" type="radio" name="accountType" value="BUSINESS">Business
 		</div>
 		<div class="comp">Do you need a debit card ? <br>
 			<input class="minComp" type="radio" name="debitCard" value="true" checked>Yes
@@ -40,7 +41,7 @@
 			<input class="minComp primary" type="radio" name="foreignCurrency" value="true" checked>Yes
 			<input class="minComp secondary" type="radio" name="foreignCurrency" value="false">No
 		</div>
-		<div class="comp">Describe the product<br>
+		<div class="comp">Describe the features you would like to have in your product<br>
 			<textarea rows="5" cols="50" name="description" class="minComp" placeholder="Please enter features here"></textarea>
 		</div>
 		<div class="compBtn">
@@ -51,16 +52,6 @@
 			<div class="col-lg-12 col-xs-12">
 				<div class="well">
 					<div class="form-group row">
-						<div class="col-lg-6 col-md-6 col-xs-6">
-							<label for="problems" class="control-label">Select a
-								scenario to find the best options in the scenario:</label><select
-								id="problems" class="problems form-control"><!-- <option
-									value="phones.json">Phones</option>
-								<option value="finance.json">Finance</option>
-								<option value="treatments-selection.json">Treatments-selection</option>
-								<option value="drug-candidates.json">Drug-candidates</option> -->
-								<option value="account.json">accounts</option></select>
-						</div>
 						<div class="col-lg-6 col-md-6 col-xs-6 text-right">
 							<input style="display: none;" type="button"
 								value="Analyze Sample Data" class="analyze btn"><span
