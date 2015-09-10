@@ -3,25 +3,28 @@ package com.ibm.cloudoe.samples.service;
 import java.io.IOException;
 import java.net.URISyntaxException;
 
-import javax.ws.rs.GET;
+import javax.ws.rs.Consumes;
+import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
 import org.apache.commons.io.IOUtils;
-import org.json.simple.JSONObject;
-import org.json.simple.parser.JSONParser;
-import org.json.simple.parser.ParseException;
+
+import com.google.gson.Gson;
+import com.ibm.cloudoe.samples.service.domain.Account;
+import com.ibm.cloudoe.samples.service.domain.FormRequest;
 
 @Path("/products")
 public class ProductSalesService {
 
 
-    @GET
+    @POST
+    @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
-    public JSONObject getProducts() throws URISyntaxException, IOException, ParseException {
+    public Account getProducts(final FormRequest request) throws URISyntaxException, IOException {
         ClassLoader classloader = Thread.currentThread().getContextClassLoader();
         String accounts = IOUtils.toString(classloader.getResourceAsStream("account.json"));
-        return (JSONObject)new JSONParser().parse(accounts);
+        return new Gson().fromJson(accounts, Account.class);
     }
 }
