@@ -93,6 +93,11 @@ input[type="radio"], input[type="checkbox"] {
   color: #fff;
 }
 
+.btn:hover {
+  background-color: #fd6400;
+  border: 1px solid #fd6400;
+}
+
 .showResults {
   display: block;
 }
