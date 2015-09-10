@@ -44,7 +44,7 @@
 			<textarea rows="5" cols="50" name="description" class="minComp" placeholder="Please enter features here"></textarea>
 		</div>
 		<div class="compBtn">
-			<input class="btn" type="button" name="button" value="Submit" onclick="submitform(this.form)">
+			<input class="btn" type="button" name="button" value="Submit">
 		</div>
 	</form>
 		<div class="row results">
