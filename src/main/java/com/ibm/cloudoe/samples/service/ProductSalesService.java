@@ -11,6 +11,8 @@ import javax.ws.rs.core.MediaType;
 
 import org.apache.commons.io.IOUtils;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.gson.Gson;
 import com.ibm.cloudoe.samples.service.domain.Account;
 import com.ibm.cloudoe.samples.service.domain.FormRequest;
@@ -25,6 +27,9 @@ public class ProductSalesService {
     public Account getProducts(final FormRequest request) throws URISyntaxException, IOException {
         ClassLoader classloader = Thread.currentThread().getContextClassLoader();
         String accounts = IOUtils.toString(classloader.getResourceAsStream("account.json"));
-        return new Gson().fromJson(accounts, Account.class);
+        ObjectMapper mapper = new ObjectMapper();
+        mapper.setSerializationInclusion(JsonInclude.Include.NON_NULL);
+        return mapper.readValue(accounts, Account.class);
+//        return new Gson().fromJson(accounts, Account.class);
     }
 }
