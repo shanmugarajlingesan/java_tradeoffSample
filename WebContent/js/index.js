@@ -49,7 +49,7 @@
   function loadSelectedProblem(request){
     $.ajax({
              headers: {
-               'Content-Type': 'application/json'
+               'Content-Type': 'application/json; charset=utf-8'
              },
              url: "/webApp_war/api/products",
              type: 'POST',
