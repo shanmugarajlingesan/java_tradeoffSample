@@ -44,6 +44,7 @@
     $('.results').addClass('showResults');
     $('.results').removeClass('results');
     $('.homeForm').addClass('results');
+      $('.searchImg').addClass('hidden');
  });
 
   function loadSelectedProblem(request){
