@@ -7,7 +7,7 @@
 	<property name="debuglevel" value="source,lines,vars" />
 	<property name="target" value="1.6" />
 	<property name="source" value="1.6" />
-	<property name="ARCHIVE_DIR" value="output" />
+	<property name="ARCHIVE_DIR" value="." />
 	<property name="LIB_DIR" value="./lib" />
 	<property name="WEB_INF_LIB_DIR" value="./WebContent/WEB-INF/lib" />
 	<property name="warname" value="webApp.war" />
@@ -32,7 +32,7 @@
 	<target name="cleanall" depends="clean" />
 	<target name="build-project" depends="clean,init">
 		<copy todir="${ARCHIVE_DIR}">
-		  <fileset file="manifest.yml" />
+			<fileset file="manifest.yml" />
 		</copy>
 		<echo message="${ant.project.name}: ${ant.file}" />
 		<javac debug="true" debuglevel="${debuglevel}" destdir="build/bin" source="${source}" target="${target}" includeantruntime="false">
@@ -43,13 +43,12 @@
 
 	<target name="build-war" depends="build-project">
 		<war destfile="${ARCHIVE_DIR}/${warname}" webxml="WebContent/WEB-INF/web.xml">
-			<webinf dir="WebContent/WEB-INF" />
-			<zipfileset dir="src" prefix="WEB-INF/src" />
+			<!-- <webinf dir="WebContent/WEB-INF" /> -->
 			<fileset dir="WebContent">
 				<include name="**/*" />
 			</fileset>
-			<lib dir="WebContent/WEB-INF/lib" />
-			<classes dir="build/bin" />
+			<!-- <lib dir="WebContent/WEB-INF/lib" /> -->
+			<!-- <classes dir="build/bin" /> -->
 		</war>
 	</target>
 

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Tradeoff Analytics</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/watson-bootstrap-dark.css">
+    <link rel="stylesheet" href="css/banner.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript"
+            src="https://ta-cdn.mybluemix.net/v1/TradeoffAnalytics.js"></script>
+    <script src="js/index.js"></script>
+</head>
+<body>
+<div class="wrapper">
+    <div class="col-lg-12 col-xs-12">
+        <div class="header">
+            <img class="raboLogo" src="images/logo.png">
+
+            <div class="headerColor">
+                Zoek Producten
+            </div>
+        </div>
+        <form class="homeForm" action="" method="">
+            <h3 class="formHeader">Find the product which meets your expectations..</h3>
+
+            <div class="comp">
+                To which category of customer you belong ?
+                <div>
+                <input type="radio" name="accountType" value="PRIVATE" checked>Private</input>
+                <input type="radio" name="accountType" value="BUSINESS">Business</input>
+                </div>
+            </div>
+            <div class="comp">
+                Do you need a debit card ?
+                <div>
+                <input type="radio" name="debitCard" value="true" checked>Yes</input>
+                <input type="radio" name="debitCard" value="false">No</input>
+                </div>
+            </div>
+            <div class="comp">
+                Do you need a Credit card ?
+                <div>
+                <input type="radio" name="creditCard" value="true" checked>Yes</input>
+                <input type="radio" name="creditCard" value="false">No</input>
+                </div>
+            </div>
+            <div class="comp">
+                Does your product need foreign currency ?
+                <div>
+                <input type="radio" name="foreignCurrency" value="true" checked>Yes</input>
+                <input type="radio" name="foreignCurrency" value="false">No</input>
+                </div>
+            </div>
+            <div class="comp">
+                Describe the features you would like to have in your product
+				<textarea rows="5" name="description" class="minComp"
+                          placeholder="Please enter features here"></textarea>
+            </div>
+            <div>
+                <input class="submitbtn btn" type="button" name="button" value="Submit"/>
+            </div>
+        </form>
+        <img class="col-lg-offset-12 col-xs-offset-12 searchImg" src="images/search.svg"/>
+    </div>
+</div>
+</body>
+</html>
