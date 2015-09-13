@@ -1,3 +1,5 @@
+<%--<%@ page import="java.io.PrintWriter" %>
+<%@ page import="java.io.IOException" %>--%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
@@ -28,34 +30,29 @@
 		<form class="homeForm" action="" method="">
 			<h3 class="formHeader">Find the product which meets your expectations..</h3>
 
-			<div class="comp">
-				To which category of customer you belong ?
-				<div>
-					<input type="radio" name="accountType" value="PRIVATE" checked>Private</input>
-					<input type="radio" name="accountType" value="BUSINESS">Business</input>
-				</div>
-			</div>
-			<div class="comp">
-				Do you need a debit card ?
-				<div>
-					<input type="radio" name="debitCard" value="true" checked>Yes</input>
-					<input type="radio" name="debitCard" value="false">No</input>
-				</div>
-			</div>
-			<div class="comp">
-				Do you need a Credit card ?
-				<div>
-					<input type="radio" name="creditCard" value="true" checked>Yes</input>
-					<input type="radio" name="creditCard" value="false">No</input>
-				</div>
-			</div>
-			<div class="comp">
-				Does your product need foreign currency ?
-				<div>
-					<input type="radio" name="foreignCurrency" value="true" checked>Yes</input>
-					<input type="radio" name="foreignCurrency" value="false">No</input>
-				</div>
-			</div>
+			<%!
+				public String displayRadioButtonPair(String question, String name, String value1, String value2, String text1, String text2) {
+					String id1 = name + "1";
+					String id2 = name + "2";
+					String output = "<div class='comp'>" + question + " ?" +
+							"<div>" +
+							"<input type='radio' name='" + name + "' id='" + id1 + "' value='" + value1 + "' checked/><label for='" + id1 + "'><span></span>" + text1 + "</label>" +
+							"<input type='radio' name='" + name + "' id='" + id2 + "' value='" + value2 + "'/><label for='" + id2 + "'><span></span>" + text2 + "</label>" +
+							"</div>" +
+							"</div>";
+
+					return output;
+				}
+			%>
+
+			<%=displayRadioButtonPair("To which category of customer you belong",
+					"accountType", "PRIVATE", "BUSINESS", "Private", "Business")%>
+			<%=displayRadioButtonPair("Do you need a debit card",
+					"debitCard", "true", "false", "Yes", "No")%>
+			<%=displayRadioButtonPair("Do you need a Credit card",
+					"creditCard", "true", "false", "Yes", "No")%>
+			<%=displayRadioButtonPair("Does your product need foreign currency",
+					"foreignCurrency", "true", "false", "Yes", "No")%>
 			<div class="comp">
 				Describe the features you would like to have in your product
 				<textarea rows="5" name="description" class="minComp"
