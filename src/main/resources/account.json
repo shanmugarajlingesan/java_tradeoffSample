@@ -2,12 +2,19 @@
   "subject": "Account",
   "columns": [
     {
-      "key": "price",
-      "type": "numeric",
+      "key": "customer_type",
+      "type": "categorical",
       "goal": "min",
-      "full_name": "Price",
+      "full_name": "Customer Type",
       "is_objective": true,
-      "format": "€####0.00"
+      "range": [
+        "Private",
+        "Business"
+      ],
+      "preference": [
+        "Private",
+        "Business"
+      ]
     },
     {
       "key": "credit_card",
@@ -40,6 +47,21 @@
       ]
     },
     {
+      "key": "over_draft",
+      "type": "categorical",
+      "goal": "min",
+      "full_name": "Over Draft",
+      "is_objective": true,
+      "range": [
+        "Yes",
+        "No"
+      ],
+      "preference": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
       "key": "foreign_currency",
       "type": "categorical",
       "goal": "min",
@@ -53,6 +75,30 @@
         "Yes",
         "No"
       ]
+    },
+    {
+      "key": "price",
+      "type": "numeric",
+      "goal": "min",
+      "full_name": "Price",
+      "is_objective": true,
+      "format": "€####0.00"
+    },
+    {
+      "key": "interest_percentage_month",
+      "type": "numeric",
+      "goal": "min",
+      "full_name": "Interest Percentage Month",
+      "is_objective": true,
+      "format": "€####0.00"
+    },
+    {
+      "key": "popularity_percentage",
+      "type": "numeric",
+      "goal": "min",
+      "full_name": "Popularity Percentage",
+      "is_objective": true,
+      "format": "€####0.00"
     }
   ],
   "options": [
@@ -60,10 +106,14 @@
       "key": "1",
       "name": "Test1 Account",
       "values": {
-        "price": 3,
+      "customer_type" : "Private",
         "credit_card": "Yes",
         "debit_card": "Yes",
-        "foreign_currency": "No"
+        "over_draft" : "Yes",
+        "foreign_currency": "No",
+         "price": 3,
+        "interest_percentage_month" : "8",
+        "popularity_percentage" : "60"
       },
       "description_html": ""
     },
@@ -71,10 +121,15 @@
       "key": "2",
       "name": "Test2 Account",
       "values": {
-        "price": 5,
-        "credit_card": "No",
-        "debit_card": "No",
-        "foreign_currency": "Yes"
+      
+      "customer_type" : "Private",
+        "credit_card": "Yes",
+        "debit_card": "Yes",
+        "over_draft" : "Yes",
+        "foreign_currency": "No",
+         "price": 3,
+        "interest_percentage_month" : "8",
+        "popularity_percentage" : "60"
       },
       "description_html": ""
     },
@@ -82,10 +137,15 @@
       "key": "3",
       "name": "Test3 Account",
       "values": {
-        "price": 4,
+        
+      "customer_type" : "Private",
         "credit_card": "Yes",
-        "debit_card": "No",
-        "foreign_currency": "Yes"
+        "debit_card": "Yes",
+        "over_draft" : "Yes",
+        "foreign_currency": "No",
+         "price": 3,
+        "interest_percentage_month" : "8",
+        "popularity_percentage" : "60"
       },
       "description_html": ""
     },
@@ -93,10 +153,14 @@
       "key": "4",
       "name": "Test4 Account",
       "values": {
-        "price": 1,
+      "customer_type" : "Private",
         "credit_card": "Yes",
-        "debit_card": "No",
-        "foreign_currency": "No"
+        "debit_card": "Yes",
+        "over_draft" : "Yes",
+        "foreign_currency": "No",
+         "price": 3,
+        "interest_percentage_month" : "8",
+        "popularity_percentage" : "60"
       },
       "description_html": ""
     },
@@ -104,10 +168,14 @@
       "key": "5",
       "name": "Test5 Account",
       "values": {
-        "price": 0,
+      "customer_type" : "Private",
         "credit_card": "Yes",
         "debit_card": "Yes",
-        "foreign_currency": "Yes"
+        "over_draft" : "Yes",
+        "foreign_currency": "No",
+         "price": 3,
+        "interest_percentage_month" : "8",
+        "popularity_percentage" : "60"
       },
       "description_html": ""
     },
@@ -115,10 +183,14 @@
       "key": "6",
       "name": "Test6 Account",
       "values": {
-        "price": 2,
+      "customer_type" : "Private",
         "credit_card": "Yes",
-        "debit_card": "No",
-        "foreign_currency": "Yes"
+        "debit_card": "Yes",
+        "over_draft" : "Yes",
+        "foreign_currency": "No",
+         "price": 3,
+        "interest_percentage_month" : "8",
+        "popularity_percentage" : "60"
       },
       "description_html": ""
     },
@@ -126,10 +198,14 @@
       "key": "7",
       "name": "Test7 Account",
       "values": {
-        "price": 8,
+      "customer_type" : "Private",
         "credit_card": "Yes",
-        "debit_card": "No",
-        "foreign_currency": "No"
+        "debit_card": "Yes",
+        "over_draft" : "Yes",
+        "foreign_currency": "No",
+         "price": 3,
+        "interest_percentage_month" : "8",
+        "popularity_percentage" : "60"
       },
       "description_html": ""
     }
