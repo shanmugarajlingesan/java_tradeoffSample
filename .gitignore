@@ -7,3 +7,4 @@ output/
 *.iml
 .idea
 .settings
+*.war

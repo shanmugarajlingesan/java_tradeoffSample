@@ -1,20 +1,22 @@
 package com.ibm.cloudoe.samples.service.domain;
 
+import java.util.Comparator;
+
 /**
  * Created by PurushonthamanP on 9/10/2015.
  */
-public class Options {
+public class Options implements Comparable<Options> {
 
-    private String key;
+    private int key;
     private String name;
     private Values values;
     private String description_html;
 
-    public String getKey() {
+    public int getKey() {
         return key;
     }
 
-    public void setKey(final String key) {
+    public void setKey(int key) {
         this.key = key;
     }
 
@@ -40,5 +42,10 @@ public class Options {
 
     public void setDescription_html(final String description_html) {
         this.description_html = description_html;
+    }
+
+    @Override
+    public int compareTo(Options o) {
+        return (this.key - o.key);
     }
 }

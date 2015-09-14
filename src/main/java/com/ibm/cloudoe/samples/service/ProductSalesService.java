@@ -10,13 +10,10 @@ import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
-import com.ibm.cloudoe.samples.service.domain.Options;
-import com.ibm.cloudoe.samples.service.domain.YesNoFlag;
+import com.ibm.cloudoe.samples.service.domain.*;
 import org.apache.commons.io.IOUtils;
 
 import com.google.gson.Gson;
-import com.ibm.cloudoe.samples.service.domain.Account;
-import com.ibm.cloudoe.samples.service.domain.FormRequest;
 
 @Path("/products")
 public class ProductSalesService {
@@ -39,32 +36,36 @@ public class ProductSalesService {
     private List<Options> filterOptions(final FormRequest request, final Account account) {
         final List<Options> listOfOptions = new ArrayList<Options>();
 
-        if(request.isDebitCard()) {
-            for (final Options option : account.getOptions()) {
-                if (option.getValues().getDebit_card().equals(YesNoFlag.Yes)) {
-                    listOfOptions.add(option);
+        for (final Options opt : account.getOptions()) {
+            if (request.getAccountType().equals(opt.getValues().getAccount_type())) {
+                if (request.isDebitCard()) {
+                    for (final Options option : account.getOptions()) {
+                        if (option.getValues().getDebit_card().equals(YesNoFlag.Yes)) {
+                            listOfOptions.add(option);
+                        }
+                    }
+                }
+
+                if (request.isCreditCard()) {
+                    for (final Options option : account.getOptions()) {
+                        if (option.getValues().getCredit_card().equals(YesNoFlag.Yes)) {
+                            listOfOptions.add(option);
+                        }
+                    }
+                }
+
+                if (request.isForeignCurrency()) {
+                    for (final Options option : account.getOptions()) {
+                        if (option.getValues().getForeign_currency().equals(YesNoFlag.Yes)) {
+                            listOfOptions.add(option);
+                        }
+                    }
                 }
             }
         }
-
-        if(request.isCreditCard()) {
-            for (final Options option : account.getOptions()) {
-                if (option.getValues().getCredit_card().equals(YesNoFlag.Yes)) {
-                    listOfOptions.add(option);
-                }
-            }
-        }
-
-        if(request.isForeignCurrency()) {
-            for (final Options option : account.getOptions()) {
-                if (option.getValues().getForeign_currency().equals(YesNoFlag.Yes)) {
-                    listOfOptions.add(option);
-                }
-            }
-        }
-
         final List<Options> uniqueOptions = new ArrayList<Options>();
         uniqueOptions.addAll(new HashSet<Options>(listOfOptions));
+        Collections.sort(uniqueOptions);
 
         return uniqueOptions;
     }

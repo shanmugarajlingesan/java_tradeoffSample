@@ -52,6 +52,7 @@
              headers: {
                'Content-Type': 'application/json; charset=utf-8'
              },
+             cache: false,
              url: "/webApp_war/api/products",
              type: 'POST',
              dataType: 'json',
