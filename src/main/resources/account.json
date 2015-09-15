@@ -34,9 +34,7 @@
     {
       "key": "over_draft",
       "type": "categorical",
-      "goal": "min",
       "full_name": "Over Draft",
-      "is_objective": true,
       "range": [
         "Yes",
         "No"
@@ -49,9 +47,7 @@
     {
       "key": "foreign_currency",
       "type": "categorical",
-      "goal": "min",
       "full_name": "Foreign Currency",
-      "is_objective": true,
       "range": [
         "Yes",
         "No"
@@ -75,135 +71,232 @@
       "goal": "min",
       "full_name": "Interest %/Month",
       "is_objective": true
-    },
-    {
-      "key": "popularity_percentage",
-      "type": "numeric",
-      "goal": "min",
-      "full_name": "Popularity %",
-      "is_objective": true
     }
   ],
   "options": [
     {
       "key": 1,
-      "name": "Test1 Account",
+      "name": "Rabo StudentenRekening",
       "values": {
-      "account_type" : "PRIVATE",
+        "account_type" : "PRIVATE",
         "credit_card": "Yes",
         "debit_card": "Yes",
-        "over_draft" : "Yes",
+        "over_draft" : "No",
         "foreign_currency": "No",
-         "price": 100,
-        "interest_percentage_month" : 8,
-        "popularity_percentage" : 50
+         "price": 0,
+        "interest_percentage_month" : 0.9,
+         "account" : "Payment" 
       },
       "description_html": ""
     },
     {
       "key": 2,
-      "name": "Test2 Account",
+      "name": "Rabo BasisRekening",
       "values": {
       
-      "account_type" : "BUSINESS",
+      "account_type" : "PRIVATE",
         "credit_card": "Yes",
         "debit_card": "Yes",
         "over_draft" : "No",
         "foreign_currency": "No",
-         "price": 150,
-        "interest_percentage_month" : 7,
-        "popularity_percentage" : 90
+         "price": 4,
+        "interest_percentage_month" : 0,
+         "account" : "Payment" 
       },
       "description_html": ""
     },
     {
       "key": 3,
-      "name": "Test3 Account",
+      "name": "Rabo DirectRekening",
       "values": {
         
       "account_type" : "PRIVATE",
         "credit_card": "Yes",
-        "debit_card": "No",
-        "over_draft" : "Yes",
+        "debit_card": "Yes",
+        "over_draft" : "No",
         "foreign_currency": "No",
-         "price": 90,
-        "interest_percentage_month" : 10,
-        "popularity_percentage" : 70
+         "price": 5,
+        "interest_percentage_month" : 0
       },
       "description_html": ""
     },
     {
       "key": 4,
-      "name": "Test4 Account",
+      "name": "Rabo TotaalRekening",
       "values": {
-      "account_type" : "BUSINESS",
-        "credit_card": "No",
+      "account_type" : "PRIVATE",
+        "credit_card": "Yes",
         "debit_card": "Yes",
-        "over_draft" : "No",
-        "foreign_currency": "Yes",
-         "price": 190,
-        "interest_percentage_month" : 6,
-        "popularity_percentage" : 55
+        "over_draft" : "Yes",
+        "foreign_currency": "NO",
+         "price": 6,
+        "interest_percentage_month" : 0,
+         "account" : "Payment" 
       },
       "description_html": ""
     },
     {
       "key": 5,
-      "name": "Test5 Account",
+      "name": "Rabo TopKidRekening",
       "values": {
       "account_type" : "PRIVATE",
-        "credit_card": "Yes",
+        "credit_card": "No",
         "debit_card": "Yes",
         "over_draft" : "No",
-        "foreign_currency": "Yes",
-         "price": 120,
-        "interest_percentage_month" : 9,
-        "popularity_percentage" : 80
+        "foreign_currency": "No",
+         "price": 0,
+        "interest_percentage_month" : 0.8,
+         "account" : "Payment" 
       },
       "description_html": ""
     },
     {
       "key": 6,
-      "name": "Test6 Account",
+      "name": "Rabo RiantRekening",
       "values": {
       "account_type" : "PRIVATE",
         "credit_card": "Yes",
-        "debit_card": "No",
-        "over_draft" : "Yes",
+        "debit_card": "Yes",
+        "over_draft" : "No",
         "foreign_currency": "No",
-         "price": 95,
-        "interest_percentage_month" : 9,
-        "popularity_percentage" : 80
+         "price": 5.8,
+        "interest_percentage_month" : 0,
+         "account" : "Payment" 
       },
       "description_html": ""
     },
     {
       "key": 7,
-      "name": "Test7 Account",
+      "name": "Rabo JongerenRekening",
       "values": {
-      "account_type" : "BUSINESS",
+      "account_type" : "Private",
         "credit_card": "Yes",
-        "debit_card": "Yes",
+        "debit_card": "No",
         "over_draft" : "No",
-        "foreign_currency": "Yes",
-         "price": 80,
-        "interest_percentage_month" : 10,
-        "popularity_percentage" : 80
+        "foreign_currency": "No",
+         "price": 0,
+        "interest_percentage_month" : 0.8,
+         "account" : "Payment" 
       },
       "description_html": ""
     },
     {
       "key": 8,
-      "name": "Test8 Account",
+      "name": "Rabo Deposito",
       "values": {
-        "account_type" : "BUSINESS",
-        "credit_card": "Yes",
+      "account_type" : "Private",
+        "credit_card": "No",
         "debit_card": "No",
         "over_draft" : "No",
-        "foreign_currency": "Yes",
-        "price": 200,
-        "interest_percentage_month" : 8,
-        "popularity_percentage" : 40
+        "foreign_currency": "No",
+         "price": 0,
+        "interest_percentage_month" : 2.4,
+         "account" : "Saving" 
+      },
+      "description_html": ""
+    },
+    {
+      "key": 9,
+      "name": "Toekomst sparen",
+      "values": {
+      "account_type" : "Private",
+        "credit_card": "No",
+        "debit_card": "No",
+        "over_draft" : "No",
+        "foreign_currency": "No",
+         "price": 0,
+        "interest_percentage_month" : 2.4,
+         "account" : "Saving" 
+      },
+      "description_html": ""
+    },
+    {
+      "key": 10,
+      "name": "Toekomst sparen",
+      "values": {
+      "account_type" : "Private",
+        "credit_card": "No",
+        "debit_card": "No",
+        "over_draft" : "No",
+        "foreign_currency": "No",
+         "price": 0,
+        "interest_percentage_month" : 2.4,
+         "account" : "Saving" 
+      },
+      "description_html": ""
+    },
+    {
+      "key": 11,
+      "name": "Rabo PeriodeSparen 90",
+      "values": {
+      "account_type" : "Private",
+        "credit_card": "No",
+        "debit_card": "No",
+        "over_draft" : "No",
+        "foreign_currency": "No",
+         "price": 0,
+        "interest_percentage_month" : 1.1,
+         "account" : "Saving" 
+      },
+      "description_html": ""
+    },
+    {
+      "key": 12,
+      "name": "Rabo InternetSparen",
+      "values": {
+      "account_type" : "Private",
+        "credit_card": "No",
+        "debit_card": "No",
+        "over_draft" : "No",
+        "foreign_currency": "No",
+         "price": 0,
+        "interest_percentage_month" : 4,
+         "account" : "Saving" 
+      },
+      "description_html": ""
+    },
+    {
+      "key": 13,
+      "name": "Rabo GeneratieSparen",
+      "values": {
+      "account_type" : "Private",
+        "credit_card": "No",
+        "debit_card": "No",
+        "over_draft" : "No",
+        "foreign_currency": "No",
+         "price": 0,
+        "interest_percentage_month" : 1,
+         "account" : "Saving" 
+      },
+      "description_html": ""
+    },
+    {
+      "key": 14,
+      "name": "Toekomst sparen",
+      "values": {
+      "account_type" : "Private",
+        "credit_card": "No",
+        "debit_card": "No",
+        "over_draft" : "No",
+        "foreign_currency": "No",
+        "price": 0,
+        "interest_percentage_month" : 9.8,
+         "account" : "Saving" 
+      },
+      "description_html": ""
+    },
+    {
+      "key": 15,
+      "name": "Rabo Direct Investment",
+      "values": {
+      "account_type" : "Private",
+        "credit_card": "No",
+        "debit_card": "No",
+        "over_draft" : "No",
+        "foreign_currency": "No",
+        "price": 0,
+        "interest_percentage_month" : 12,
+         "account" : "Saving" 
       },
       "description_html": ""
     }
