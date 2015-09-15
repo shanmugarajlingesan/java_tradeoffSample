@@ -51,8 +51,6 @@
 					"debitCard", "true", "false", "Yes", "No")%>
 			<%=displayRadioButtonPair("Do you need a Credit card",
 					"creditCard", "true", "false", "Yes", "No")%>
-			<%=displayRadioButtonPair("Does your product need foreign currency",
-					"foreignCurrency", "true", "false", "Yes", "No")%>
 			<div class="comp">
 				Describe the features you would like to have in your product
 				<textarea rows="5" name="description" class="minComp"

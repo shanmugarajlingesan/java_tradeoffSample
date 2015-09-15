@@ -5,13 +5,13 @@ package com.ibm.cloudoe.samples.service.domain;
  */
 public class Values {
 
-    private int price;
+    private float price;
     private YesNoFlag credit_card;
     private YesNoFlag debit_card;
     private YesNoFlag foreign_currency;
     private YesNoFlag over_draft;
-    private int interest_percentage_month;
-    private int popularity_percentage;
+    private float interest_percentage_month;
+    private String account;
     private AccountType account_type;
 
     public YesNoFlag getCredit_card() {
@@ -46,28 +46,28 @@ public class Values {
         this.over_draft = over_draft;
     }
 
-    public int getPrice() {
+    public float getPrice() {
         return price;
     }
 
-    public void setPrice(int price) {
+    public void setPrice(float price) {
         this.price = price;
     }
 
-    public int getInterest_percentage_month() {
+    public float getInterest_percentage_month() {
         return interest_percentage_month;
     }
 
-    public void setInterest_percentage_month(int interest_percentage_month) {
+    public void setInterest_percentage_month(float interest_percentage_month) {
         this.interest_percentage_month = interest_percentage_month;
     }
 
-    public int getPopularity_percentage() {
-        return popularity_percentage;
+    public String getAccount() {
+        return account;
     }
 
-    public void setPopularity_percentage(int popularity_percentage) {
-        this.popularity_percentage = popularity_percentage;
+    public void setAccount(String account) {
+        this.account = account;
     }
 
     public AccountType getAccount_type() {

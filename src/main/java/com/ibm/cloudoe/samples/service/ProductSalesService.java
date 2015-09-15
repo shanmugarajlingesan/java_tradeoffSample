@@ -37,16 +37,13 @@ public class ProductSalesService {
         final List<Options> listOfOptions = new ArrayList<Options>();
 
         for (final Options option : account.getOptions()) {
-            if (request.getAccountType().equals(option.getValues().getAccount_type())) {
+            if (request.getAccountType().equals(option.getValues().getAccount_type()) &&
+                    request.getDescription().toLowerCase().contains(option.getValues().getAccount().toLowerCase())) {
                 if (request.isDebitCard() && option.getValues().getDebit_card().equals(YesNoFlag.Yes)) {
                     listOfOptions.add(option);
                 }
 
                 if (request.isCreditCard() && option.getValues().getCredit_card().equals(YesNoFlag.Yes)) {
-                    listOfOptions.add(option);
-                }
-
-                if (request.isForeignCurrency() && option.getValues().getForeign_currency().equals(YesNoFlag.Yes)) {
                     listOfOptions.add(option);
                 }
             }

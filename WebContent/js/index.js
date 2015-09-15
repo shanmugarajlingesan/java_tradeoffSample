@@ -36,7 +36,6 @@
       "accountType" : this.form.accountType.value,
       "debitCard" : this.form.debitCard.value,
       "creditCard" : this.form.creditCard.value,
-      "foreignCurrency": this.form.foreignCurrency.value,
       "description": this.form.description.value
     };
     console.log(formData);
