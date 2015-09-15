@@ -19,6 +19,8 @@
 /**
  * Anonymous function, to use as a wrapper
  */
+
+
 (function() {
 
   // GLOBAL VARIABLES
@@ -27,6 +29,38 @@
   var lastProfile = 'basic';
   var MIN_BAR_SLIDE_PERIOD = 500;
   var currentProblem = null;
+
+  $('.btn').bind('click', this, function() {
+    var formData = {
+      "accountType" : this.form.accountType.value,
+      "debitCard" : this.form.debitCard.value,
+      "creditCard" : this.form.creditCard.value,
+      "foreignCurrency": this.form.foreignCurrency.value,
+      "description": this.form.description.value
+    };
+    console.log(formData);
+    loadSelectedProblem(formData);
+    $('.results').addClass('showResults');
+    $('.results').removeClass('results');
+ });
+
+  function loadSelectedProblem(request){
+    $.ajax({
+             headers: {
+               'Content-Type': 'application/json'
+             },
+             url: "/webApp_war/api/products",
+             type: 'POST',
+             dataType: 'json',
+             data: request,
+             success: function(data){
+               $('.problemText').val(JSON.stringify(data, null, 2)).change();
+             },
+             error: function(xhr, status, thrown) {
+               alert("some error");
+             }
+           });
+  }
 
   /**
    * Smooth scroll to any DOM element
@@ -107,7 +141,6 @@
 
   function onPageLoad() {
     loadTradeoffAnalytics('basic', 'watson', onPageReady, onError);
-    loadSelectedProblem();
     loadProfile('basic');
     loadTheme('watson');
   }
@@ -129,18 +162,6 @@
     }
   }
 
-  function loadSelectedProblem() {
-    $.ajax({
-        url: "/webApp_war/api/products",
-        type: 'GET',
-        success: function(data){
-          $('.problemText').val(JSON.stringify(data, null, 2)).change();
-        },
-        error: function(xhr, status, thrown) {
-          alert("some error");
-        }
-    });
-  }
 
   function createOptionsTable(problem, parent) {
     var table = createDom('table', {}, parent);
@@ -415,7 +436,7 @@
   // On page load
   $(document).ready(onPageLoad);
 
-  // Problem events
+    // Problem events
   $('.problems').change(loadSelectedProblem);
   $('.problemText').change(onProblemChanged);
   $('.viewTable').click(toggleTable);
