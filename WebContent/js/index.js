@@ -52,7 +52,7 @@
                'Content-Type': 'application/json; charset=utf-8'
              },
              cache: false,
-             url: "/webApp_war/api/products",
+             url: "/api/products",
              type: 'POST',
              dataType: 'json',
              data: JSON.stringify(request),

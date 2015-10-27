@@ -1,9 +1,9 @@
 applications:
 - services:
-  - Tradeoff Analytics-ht
+  - Tradeoff Analytics-i9
   disk_quota: 1024M
-  host: tradeoffjava
-  name: tradeoffjava
+  host: searchproduct
+  name: searchproduct
   path: webApp.war
   domain: mybluemix.net
   instances: 1

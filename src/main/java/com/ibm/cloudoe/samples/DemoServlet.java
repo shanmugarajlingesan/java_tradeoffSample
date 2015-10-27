@@ -50,7 +50,7 @@ public class DemoServlet extends HttpServlet {
 	private static Logger logger = Logger.getLogger(DemoServlet.class.getName());
 	private static final long serialVersionUID = 1L;
 
-	private String serviceName = "tradeoff_analytics";
+	private final String serviceName = "tradeoff_analytics";
 
 	// If running locally complete the variables below with the information in VCAP_SERVICES
 	private String baseURL = "https://gateway.watsonplatform.net/tradeoff-analytics/api";
@@ -135,7 +135,7 @@ public class DemoServlet extends HttpServlet {
 	@Override
 	public void init() throws ServletException {
 		super.init();
-		//processVCAP_Services();
+        processVCAP_Services();
 	}
 	/**
 	 * If exists, process the VCAP_SERVICES environment variable in order to get the
@@ -151,7 +151,7 @@ public class DemoServlet extends HttpServlet {
 			String keyString = (String) key;
 			logger.info("found key: " + key);
 			if (keyString.startsWith(serviceName)) {
-				JSONArray services = (JSONArray)sysEnv.get(key);
+                JSONArray services = (JSONArray) sysEnv.get(key);
 				JSONObject service = (JSONObject)services.get(0);
 				JSONObject credentials = (JSONObject)service.get("credentials");
 				baseURL  = (String)credentials.get("url");
@@ -182,17 +182,21 @@ public class DemoServlet extends HttpServlet {
 				.authPreemptive(new HttpHost(url.getHost(), url.getPort(), url.getScheme()))
 				.cookieStore(new CookieStore() {
 					// Noop cookie store.
-					public void addCookie(Cookie arg0) {
+					@Override
+                    public void addCookie(Cookie arg0) {
 					}
 
-					public void clear() {
+					@Override
+                    public void clear() {
 					}
 
-					public boolean clearExpired(Date arg0) {
+					@Override
+                    public boolean clearExpired(Date arg0) {
 						return false;
 					}
 
-					public List<Cookie> getCookies() {
+					@Override
+                    public List<Cookie> getCookies() {
 						return Collections.emptyList();
 					}
 				});
