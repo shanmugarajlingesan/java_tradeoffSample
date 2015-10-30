@@ -299,5 +299,5 @@ html.noScroll {
 }
 
 .decisionArea {
-  z-index: -1;
+  z-index: 30;
 }

@@ -87,7 +87,7 @@
         "interest_percentage_month" : 0.9,
          "account" : "Payment" 
       },
-      "description_html": ""
+      "description_html": "<a href='https://www.rabobank.nl/particulieren/betalen/betaalpakketten/rabo-studentenpakket/' >Rabo StudentenRekening</a>"
     },
     {
       "key": 2,
@@ -103,7 +103,7 @@
         "interest_percentage_month" : 0,
          "account" : "Payment" 
       },
-      "description_html": ""
+      "description_html": "aaaa"
     },
     {
       "key": 3,
@@ -119,7 +119,7 @@
         "interest_percentage_month" : 0,
         "account" : "Payment"
       },
-      "description_html": ""
+      "description_html": "aaaa"
     },
     {
       "key": 4,
@@ -134,7 +134,7 @@
         "interest_percentage_month" : 0,
          "account" : "Payment" 
       },
-      "description_html": ""
+      "description_html": "aaaa"
     },
     {
       "key": 5,
@@ -149,7 +149,7 @@
         "interest_percentage_month" : 0.8,
          "account" : "Payment" 
       },
-      "description_html": ""
+      "description_html": "aaaa"
     },
     {
       "key": 6,
@@ -164,7 +164,7 @@
         "interest_percentage_month" : 0,
          "account" : "Payment" 
       },
-      "description_html": ""
+      "description_html": "aaaa"
     },
     {
       "key": 7,
@@ -179,7 +179,7 @@
         "interest_percentage_month" : 0.8,
          "account" : "Payment" 
       },
-      "description_html": ""
+      "description_html": "aaaa"
     },
     {
       "key": 8,
@@ -194,7 +194,7 @@
         "interest_percentage_month" : 2.4,
          "account" : "Saving" 
       },
-      "description_html": ""
+      "description_html": "aaaa"
     },
     {
       "key": 9,
@@ -209,7 +209,7 @@
         "interest_percentage_month" : 2.4,
          "account" : "Saving" 
       },
-      "description_html": ""
+      "description_html": "aaaa"
     },
     {
       "key": 10,
@@ -224,7 +224,7 @@
         "interest_percentage_month" : 2.4,
          "account" : "Saving" 
       },
-      "description_html": ""
+      "description_html": "aaaa"
     },
     {
       "key": 11,
@@ -239,7 +239,7 @@
         "interest_percentage_month" : 1.1,
          "account" : "Saving" 
       },
-      "description_html": ""
+      "description_html": "aaaa"
     },
     {
       "key": 12,
@@ -254,7 +254,7 @@
         "interest_percentage_month" : 4,
          "account" : "Saving" 
       },
-      "description_html": ""
+      "description_html": "aaaa"
     },
     {
       "key": 13,
@@ -269,7 +269,7 @@
         "interest_percentage_month" : 1,
          "account" : "Saving" 
       },
-      "description_html": ""
+      "description_html": "aaaa"
     },
     {
       "key": 14,
@@ -284,7 +284,7 @@
         "interest_percentage_month" : 9.8,
          "account" : "Saving" 
       },
-      "description_html": ""
+      "description_html": "aaaa"
     },
     {
       "key": 15,
@@ -299,7 +299,7 @@
         "interest_percentage_month" : 12,
          "account" : "Saving" 
       },
-      "description_html": ""
+      "description_html": "aaaa"
     }
   ]
 }

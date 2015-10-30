@@ -258,14 +258,17 @@
     onRestore();
     if (event.selectedOptionKeys) {
       $('.decisionArea').show();
-      var selectedOptionKey = event.selectedOptionKeys[0];//currently, maximum one option is selected 
-      var firstOptionName = currentProblem.options.filter(function(op){
-        return op.key === selectedOptionKey;
-      })[0].name;
-      $('.decisionText').text(firstOptionName);
+      var selectedOptionKey = event.selectedOptionKeys[0];//currently, maximum one option is selected
+      var decisionObj = currentProblem.options.filter(function(op){
+            return (op.key==selectedOptionKey);
+        })[0];
+       var selectedName=  decisionObj.name;
+       var url = decisionObj.description_html;
+        console.log("---url"+url);
+      $('.decisionText').html(url);
       jumpTo('.decisionArea');
     } else {
-      $('.decisionText').text('');
+      $('.decisionText').html('');
       $('.decisionArea').hide();
     }
   }
